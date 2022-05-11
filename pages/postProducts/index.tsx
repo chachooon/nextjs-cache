@@ -21,7 +21,7 @@ import { useQuery } from 'react-query';
 
 export default function ProductsPage(): React.ReactElement {
   const { status: getStatus, data: getData } = useQuery(
-    "getData",
+    "postData",
     () => axios.post(`/api/cache`,{}).then(({ data }) => data),
     {
       staleTime: 60 * 1000, // 1 minute

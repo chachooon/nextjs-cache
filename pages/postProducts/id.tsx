@@ -11,7 +11,7 @@ const fetchProduct = (id: string) => axios.post(`/api/cache`, { category: id }).
 export default function ArticlePage() {
   const router = useRouter();
   const id = typeof router.query?.category === 'string' ? router.query.category : '';
-  const { status:getStatus, data:getData } = useQuery(['getData', id], () => fetchProduct(id), {
+  const { status:getStatus, data:getData } = useQuery(['postData', id], () => fetchProduct(id), {
     staleTime: 60 * 1000, // 1 minute
     cacheTime: 60 * 1000 * 10, // 10 minutes
   });
