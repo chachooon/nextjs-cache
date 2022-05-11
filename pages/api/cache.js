@@ -1,7 +1,8 @@
 
 export default async function handler(req, res) {
     try {
-  
+      const now = new Date();	// 현재 날짜 및 시간
+      const oneMonthLater = new Date(now.setMonth(now.getMonth() + 1))
       await new Promise((resolve) => setTimeout(resolve, 1000));
  
       if(req.method === 'POST') {
@@ -11,9 +12,10 @@ export default async function handler(req, res) {
       if(req.method === 'GET') {
         res.setHeader('Access-Control-Allow-Origin', '*');
         res.setHeader('Cache-Control', 'public, max-age=30');
-        res.setHeader('Content-Location', 'http://localhost:3000/asdf');
-        res.setHeader('Location', 'http://localhost:3000/asdf');
-        res.setHeader("X-Cache", "MISS");
+        res.setHeader('Expires', oneMonthLater);
+        // res.setHeader('Content-Location', 'http://localhost:3000/asdf');
+        // res.setHeader('Location', 'http://localhost:3000/asdf');
+      
         res.setHeader("X-Cache", "MISS");
       }
    
