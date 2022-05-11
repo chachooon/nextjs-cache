@@ -24,7 +24,7 @@ export default function ArticlePage() {
         <>
           <p style={{ color: 'yellow' }}>
           {router.query?.category } &nbsp; &nbsp; &nbsp; {getStatus} &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-            <Link href={'/getproducts'}>목록으로</Link>
+            <Link href={'/getProducts'}>목록으로</Link>
           </p>
           <br />
           {getData?.map((data: any, index: number) => (
