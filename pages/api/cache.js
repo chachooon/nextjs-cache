@@ -4,12 +4,21 @@ export default async function handler(req, res) {
   
       await new Promise((resolve) => setTimeout(resolve, 1000));
  
-      // if(req.method === 'POST') {
+      if(req.method === 'POST') {
       res.setHeader("Cache-Control", "public, max-age=5, immutable");
       res.setHeader("X-Cache", "MISS");
-
+      }
+      if(req.method === 'GET') {
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        res.setHeader('Cache-Control', 'public, max-age=30');
+        res.setHeader('Content-Location', 'http://localhost:3000/asdf');
+        res.setHeader('Location', 'http://localhost:3000/asdf');
+        res.setHeader("X-Cache", "MISS");
+        res.setHeader("X-Cache", "MISS");
+      }
+   
       if(req.query['category'] === '1' || req.body['category'] === '1' ) {
-        res.status(200).json([
+        res.status(req.method === 'GET' ? 200 :201).json([
             {
                 "productCode": "IS091035",
                 "productName": "한화생명 평생동행 종신보험2204(무)[보증비용부과형]",
@@ -109,7 +118,7 @@ export default async function handler(req, res) {
         ]);  
       }
       if(req.query['category'] === '3'|| req.body['category'] === '3') {
-          res.status(200).json([
+          res.status(req.method === 'GET' ? 200 :201).json([
               {
                   "productCode": "IS095025",
                   "productName": "한화생명 암보장 더한 치매보험2204(무)",
@@ -209,7 +218,7 @@ export default async function handler(req, res) {
           ])
       }
       if(req.query['category'] === '4'|| req.body['category'] === '4') {
-          res.status(200).json([
+          res.status(req.method === 'GET' ? 200 :201).json([
               {
                   "productCode": "IS095009",
                   "productName": "LIFEPLUS 어른이보험2204(무)",
@@ -225,7 +234,7 @@ export default async function handler(req, res) {
           ])  
       }     
       if(req.query['category'] === '5'|| req.body['category'] === '5') {
-          res.status(200).json([
+          res.status(req.method === 'GET' ? 200 :201).json([
               {
                   "productCode": "IS090405",
                   "productName": "한화생명 내게맞는 연금보험(무)",
@@ -253,7 +262,7 @@ export default async function handler(req, res) {
           ])  
       }
       if(!req.query['category']) {
-        res.status(200).json([
+        res.status(req.method === 'GET' ? 200 :201).json([
           {
               "menuCategory": "1",
               "menuName": "종신/정기"
