@@ -8,7 +8,7 @@ export default async function handler(req, res) {
       res.setHeader("Cache-Control", "public, max-age=5, immutable");
       res.setHeader("X-Cache", "MISS");
 
-      if(req.query['category'] === '1') {
+      if(req.query['category'] === '1' || req.body['category'] === '1' ) {
         res.status(200).json([
             {
                 "productCode": "IS091035",
@@ -108,7 +108,7 @@ export default async function handler(req, res) {
             }
         ]);  
       }
-      if(req.query['category'] === '3') {
+      if(req.query['category'] === '3'|| req.body['category'] === '3') {
           res.status(200).json([
               {
                   "productCode": "IS095025",
@@ -208,7 +208,7 @@ export default async function handler(req, res) {
               }
           ])
       }
-      if(req.query['category'] === '4') {
+      if(req.query['category'] === '4'|| req.body['category'] === '4') {
           res.status(200).json([
               {
                   "productCode": "IS095009",
@@ -224,7 +224,7 @@ export default async function handler(req, res) {
               }
           ])  
       }     
-      if(req.query['category'] === '5') {
+      if(req.query['category'] === '5'|| req.body['category'] === '5') {
           res.status(200).json([
               {
                   "productCode": "IS090405",

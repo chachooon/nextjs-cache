@@ -116,7 +116,8 @@ const Home: NextPage = () => {
         <title>Advice Generator</title>
       </Head>
       <div style={{color: '#fff'}}>
-        <Link href="/products">products</Link> &nbsp; / &nbsp; 
+        <Link href="/postProducts">postProducts</Link> &nbsp; / &nbsp; 
+        <Link href="/getProducts">getProducts</Link> &nbsp; / &nbsp; 
         <Link href="/pokemon">pokemons</Link> &nbsp; / &nbsp; 
         <Link href="/articles">articles</Link>
       </div>

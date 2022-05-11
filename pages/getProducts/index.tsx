@@ -6,7 +6,7 @@ import { useQuery } from 'react-query';
 
 // const fetchProducts = () =>
 //   axios
-//     .get(`https://stg-api.hanwhalife.com/int/products/menus/insurances`, {
+//     .get(`https://stg-api.hanwhalife.com/int/getProducts/menus/insurances`, {
 //       headers:{
 //         ['channel-screen-id']:'CHLINT_MC_0001',
 //         ['channel-device-id']: 'null',
@@ -43,8 +43,8 @@ export default function ProductsPage(): React.ReactElement {
             cursor: 'pointer',
             backgroundColor: '#eee'
           }}>
-          {/* <Link href={`/products/${data.menuCategory}`}>{JSON.stringify(data)}</Link> */}
-          <Link href={`/products/id/?category=${data.menuCategory}`}>{JSON.stringify(data)}</Link>
+          {/* <Link href={`/getProducts/${data.menuCategory}`}>{JSON.stringify(data)}</Link> */}
+          <Link href={`/getProducts/id/?category=${data.menuCategory}`}>{JSON.stringify(data)}</Link>
         </div>
       ))}
        {getData?.map((data: any, index: number) => (
@@ -57,8 +57,8 @@ export default function ProductsPage(): React.ReactElement {
             cursor: 'pointer',
             backgroundColor: '#eee'
           }}>
-          {/* <Link href={`/products/${data.menuCategory}`}>{JSON.stringify(data)}</Link> */}
-          <Link href={`/products/id/?category=${data.menuCategory}`}>{JSON.stringify(data)}</Link>
+          {/* <Link href={`/getProducts/${data.menuCategory}`}>{JSON.stringify(data)}</Link> */}
+          <Link href={`/getProducts/id/?category=${data.menuCategory}`}>{JSON.stringify(data)}</Link>
         </div>
       ))}
        {getData?.map((data: any, index: number) => (
@@ -71,8 +71,8 @@ export default function ProductsPage(): React.ReactElement {
             cursor: 'pointer',
             backgroundColor: '#eee'
           }}>
-          {/* <Link href={`/products/${data.menuCategory}`}>{JSON.stringify(data)}</Link> */}
-          <Link href={`/products/id/?category=${data.menuCategory}`}>{JSON.stringify(data)}</Link>
+          {/* <Link href={`/getProducts/${data.menuCategory}`}>{JSON.stringify(data)}</Link> */}
+          <Link href={`/getProducts/id/?category=${data.menuCategory}`}>{JSON.stringify(data)}</Link>
         </div>
       ))}
        {getData?.map((data: any, index: number) => (
@@ -85,8 +85,8 @@ export default function ProductsPage(): React.ReactElement {
             cursor: 'pointer',
             backgroundColor: '#eee'
           }}>
-          {/* <Link href={`/products/${data.menuCategory}`}>{JSON.stringify(data)}</Link> */}
-          <Link href={`/products/id/?category=${data.menuCategory}`}>{JSON.stringify(data)}</Link>
+          {/* <Link href={`/getProducts/${data.menuCategory}`}>{JSON.stringify(data)}</Link> */}
+          <Link href={`/getProducts/id/?category=${data.menuCategory}`}>{JSON.stringify(data)}</Link>
         </div>
       ))}
        {getData?.map((data: any, index: number) => (
@@ -99,8 +99,8 @@ export default function ProductsPage(): React.ReactElement {
             cursor: 'pointer',
             backgroundColor: '#eee'
           }}>
-          {/* <Link href={`/products/${data.menuCategory}`}>{JSON.stringify(data)}</Link> */}
-          <Link href={`/products/id/?category=${data.menuCategory}`}>{JSON.stringify(data)}</Link>
+          {/* <Link href={`/getProducts/${data.menuCategory}`}>{JSON.stringify(data)}</Link> */}
+          <Link href={`/getProducts/id/?category=${data.menuCategory}`}>{JSON.stringify(data)}</Link>
         </div>
       ))}
        {getData?.map((data: any, index: number) => (
@@ -113,8 +113,8 @@ export default function ProductsPage(): React.ReactElement {
             cursor: 'pointer',
             backgroundColor: '#eee'
           }}>
-          {/* <Link href={`/products/${data.menuCategory}`}>{JSON.stringify(data)}</Link> */}
-          <Link href={`/products/id/?category=${data.menuCategory}`}>{JSON.stringify(data)}</Link>
+          {/* <Link href={`/getProducts/${data.menuCategory}`}>{JSON.stringify(data)}</Link> */}
+          <Link href={`/getProducts/id/?category=${data.menuCategory}`}>{JSON.stringify(data)}</Link>
         </div>
       ))}
        {getData?.map((data: any, index: number) => (
@@ -127,8 +127,8 @@ export default function ProductsPage(): React.ReactElement {
             cursor: 'pointer',
             backgroundColor: '#eee'
           }}>
-          {/* <Link href={`/products/${data.menuCategory}`}>{JSON.stringify(data)}</Link> */}
-          <Link href={`/products/id/?category=${data.menuCategory}`}>{JSON.stringify(data)}</Link>
+          {/* <Link href={`/getProducts/${data.menuCategory}`}>{JSON.stringify(data)}</Link> */}
+          <Link href={`/getProducts/id/?category=${data.menuCategory}`}>{JSON.stringify(data)}</Link>
         </div>
       ))}
     </>
